@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_entity_presave().
+ */
+function email_logger_node_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  // if($entity->getEntityTypeId() == 'node') {
+  $message = [
+    'entityTypeId' => $entity->getEntityTypeId(),
+    'changedTimestamp' => date('d/M/Y h:i:s a', $entity->getChangedTime()),
+    'textMessage' => 'Test hardcoded message',
+  ];
+  $messageSender = \Drupal::service('logger.email');
+  $messageSender->buildMessageEntry($message);
+  // }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function email_logger_mail($key, &$message, $params) {
+  if ($key == 'send_log_messages') {
+    $message['from'] = \Drupal::config('system.site')->get('mail');
+    $message['subject'] = t('Message logged');
+    $message['body'] = $params['message'];
+  }
+}

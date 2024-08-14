@@ -1,0 +1,4 @@
+services:
+  logger.email:
+    class: \Drupal\email_logger\Services\EmailLogger
+    arguments: ['@plugin.manager.mail', '@language_manager']

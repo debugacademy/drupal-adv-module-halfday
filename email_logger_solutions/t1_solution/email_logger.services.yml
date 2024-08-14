@@ -1,0 +1,3 @@
+services:
+  logger.email:
+    class: \Drupal\email_logger\Services\EmailLogger

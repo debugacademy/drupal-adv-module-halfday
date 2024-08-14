@@ -1,0 +1,13 @@
+uuid: 57988384-d76e-434c-b3a4-65238b48eb98
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.recipe_category
+_core:
+  default_config_hash: rSI5WTsW2S6K9n3i6_Ul-auHIO5onTjPknfThX3ON-U
+id: taxonomy_term.recipe_category
+target_entity_type_id: taxonomy_term
+target_bundle: recipe_category
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,13 @@
+uuid: a504fc74-e528-4032-8dc8-31bd36442aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_block
+_core:
+  default_config_hash: G3u6fc7JZoDvaeSgwA-ik8RL5Z2B6-ItEtSuicDgobw
+id: block_content.banner_block
+target_entity_type_id: block_content
+target_bundle: banner_block
+default_langcode: site_default
+language_alterable: true

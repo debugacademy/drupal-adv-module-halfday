@@ -1,0 +1,7 @@
+name: Email Logger
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+description: Allows authorized users to set the email address where logged messages should be sent.
+package: Custom
+type: module
+# configure: email_logger.settings

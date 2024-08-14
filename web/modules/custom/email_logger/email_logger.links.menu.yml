@@ -1,0 +1,5 @@
+#email_logger.settings:
+#  title: 'Email Logger settings'
+#  parent: system.admin_config_ui
+#  description: 'Allows users to set the email address to which logged messages will be sent.'
+#  route_name: email_logger.settings
